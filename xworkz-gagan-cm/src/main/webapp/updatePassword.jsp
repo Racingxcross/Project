@@ -28,15 +28,14 @@
 
 	</nav>
 
-	<div align="center">User Name:${userID}</div>
+	<div align="center">User Name:${userName}</div>
 	<div align="center">
 		<form action="passwordUpdate" method="post">
 			<table>
 				<tr>
 					<td>User ID</td>
 
-					<td><input type="text" name="userId" value="${userID}"
-						readonly="readonly"></td>
+					<td><input type="text" name="userName" value="${userName}"></td>
 				</tr>
 				<tr>
 					<td>New Password</td>
@@ -84,17 +83,17 @@
 					&& userPasswordvalue.length > 4
 					&& userPasswordvalue.length < 12) {
 				if (userPasswordvalue == userConfirmPasswordvalue) {
-					console.log('valide both password are same');
+					console.log('valid both password are same');
 					document.getElementById('passwordCompare').innerHTML = '';
 				} else {
-					console.log('valide both password are not same');
+					console.log('valid both password are not same');
 					document.getElementById('passwordCompare').innerHTML = 'Password and ConfirmPassword are not matching';
 				}
-				console.log('valide password');
+				console.log('valid password');
 				document.getElementById('passwordError').innerHTML = '';
 			} else {
-				console.log('invalide password');
-				document.getElementById('passwordError').innerHTML = 'Plese enter valide password length must be greater then 4 and less then 12';
+				console.log('invalid password');
+				document.getElementById('passwordError').innerHTML = 'Please enter valide password length must be greater then 4 and less then 12';
 			}
 		}
 	</script>

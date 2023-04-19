@@ -47,7 +47,7 @@ public class AjaxController {
 			return "";
 
 		} else {
-			return "UserID exist";
+			return "UserName exist";
 		}
 	}
 
@@ -62,19 +62,6 @@ public class AjaxController {
 
 		} else {
 			return "Mobile Number exist";
-		}
-	}
-
-	@GetMapping(value = "/reemail/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public String reEmail(@PathVariable String email) {
-		Long dbEmail = this.carService.findByEmail(email);
-		System.err.println(dbEmail);
-
-		if (dbEmail == 0) {
-			System.err.println("Running in equals condition");
-			return "Please enter Existing email";
-		} else {
-			return "  ";
 		}
 	}
 }

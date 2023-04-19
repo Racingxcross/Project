@@ -12,7 +12,7 @@ public interface CarService {
 
 	Set<ConstraintViolation<userDTO>> validateandsave(userDTO dto);
 
-	default userDTO userSignIn(String userId, String password) {
+	default userDTO userSignIn(String userName, String password) {
 		return null;
 	}
 
@@ -32,7 +32,7 @@ public interface CarService {
 		return null;
 	}
 
-	default Long findByUser(String user) {
+	default Long findByUserName(String user) {
 		return null;
 	}
 
@@ -40,9 +40,14 @@ public interface CarService {
 		return null;
 	}
 
-	default userDTO updatePassword(String userId, String password, String confirmPassword) {
+	default userDTO updatePassword(String userName, String password, String confirmPassword) {
 		return null;
 	}
 
-	boolean sendMail(String email);
+	default userDTO updateProfile(String userName, String email, Long mobile, String path) {
+		return null;
+	}
+
+	boolean sendMail(String email, String text);
+
 }

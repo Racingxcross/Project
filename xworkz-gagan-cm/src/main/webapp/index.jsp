@@ -15,9 +15,7 @@
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 	crossorigin="anonymous"></script>
 </head>
-
 <body>
-
 	<nav class="navbar navbar-expand-lg-navbar-Light bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"> <img
@@ -31,17 +29,11 @@
 			<a href="SignUp.jsp"><span class="glyphicon glyphicon-user"></span>
 				Sign Up</a>
 		</div>
-
-
-
-
 	</nav>
-	
 	<div>
 
 		<a href="SignIn.jsp"><span class="glyphicon glyphicon-log-in"></span>
 			Login</a>
-
 	</div>
 	<div>
 		<a href="Search.jsp"><span class="glyphicon glyphicon-log-in"></span>

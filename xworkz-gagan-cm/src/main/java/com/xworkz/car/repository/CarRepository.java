@@ -1,5 +1,6 @@
 package com.xworkz.car.repository;
 
+import java.time.LocalTime;
 import java.util.Collections;
 import java.util.List;
 
@@ -35,8 +36,9 @@ public interface CarRepository {
 
 	boolean update(CarEntity carEntity);
 
-	boolean updatePassword(String userName, String password, Boolean resetPassword);
+	boolean updatePassword(String userName, String password, Boolean resetPassword, LocalTime passwordChangedTime);
 
 	boolean loginCount(String userName, int count);
+
 
 }

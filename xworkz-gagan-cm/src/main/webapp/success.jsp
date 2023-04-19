@@ -20,10 +20,8 @@
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"></a> <img
 				src=" https://x-workz.in/static/media/Logo.cf195593dc1b3f921369.png"
-				alt="" width="80" height="48" class="d-inline-block align text-top">
-			<a class="navbar-brand" href="#"></a> <img
-				src=" https://x-workz.in/static/media/Logo.cf195593dc1b3f921369.png"
-				alt="" width="80" height="48" class="d-inline-block align text-top">
+				alt="" width="80" height="48" class="top left">
+
 		</div>
 	</nav>
 	<nav class="navbar navbar-expand">
@@ -34,6 +32,6 @@
 		</div>
 	</nav>
 
-	<h1 style="color: purple;">UPDATE SUCESSFULLY</h1>
+	<h1 style="color: green;">UPDATE SUCCESSFULLY</h1>
 </body>
 </html>

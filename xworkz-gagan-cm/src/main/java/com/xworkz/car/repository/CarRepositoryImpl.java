@@ -1,5 +1,6 @@
 package com.xworkz.car.repository;
 
+import java.time.LocalTime;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -43,7 +44,7 @@ public class CarRepositoryImpl implements CarRepository {
 	public CarEntity userSignIn(String userName) {
 		EntityManager entityManager = this.entityManagerFactory.createEntityManager();
 		try {
-			Query query = entityManager.createNamedQuery("userANDpassword");
+			Query query = entityManager.createNamedQuery("user");
 			query.setParameter("ui", userName);
 			Object object = query.getSingleResult();
 			CarEntity entity = (CarEntity) object;
@@ -165,7 +166,8 @@ public class CarRepositoryImpl implements CarRepository {
 	}
 
 	@Override
-	public boolean updatePassword(String userName, String password, Boolean resetPassword) {
+	public boolean updatePassword(String userName, String password, Boolean resetPassword,
+			LocalTime passwordChangedTime) {
 		EntityManager entityManager = this.entityManagerFactory.createEntityManager();
 		try {
 			EntityTransaction entityTransaction = entityManager.getTransaction();
@@ -174,6 +176,7 @@ public class CarRepositoryImpl implements CarRepository {
 			query.setParameter("uu", userName);
 			query.setParameter("up", password);
 			query.setParameter("urp", resetPassword);
+			query.setParameter("pct", passwordChangedTime);
 			query.executeUpdate();
 			entityTransaction.commit();
 			return true;
@@ -181,7 +184,5 @@ public class CarRepositoryImpl implements CarRepository {
 			entityManager.close();
 		}
 	}
-
-
 
 }

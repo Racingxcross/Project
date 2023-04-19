@@ -40,11 +40,6 @@
 				style="color: red"></span> <br>
 			<button type="submit" class="btn btn-success">Reset</button>
 		</form>
-		<div>
-			<span style="color: orange;">${msg}</span>
-
-		</div>
-
 	</div>
 	<script>
 		function valideEmail() {
@@ -53,17 +48,7 @@
 			console.log(userEmailvalue);
 			if (userEmailvalue != null && userEmailvalue != ""
 					&& userEmailvalue.length > 4 && userEmailvalue.length < 40) {
-				console.log('valide email');
-				const xhttp = new XMLHttpRequest();
-				console.log('Running in ajax');
-				console.log(userEmailvalue);
-				xhttp.open("GET",
-						"http://localhost:8088/xworkz-rudra-cm/reemail/"
-								+ userEmailvalue);
-				xhttp.send();
-				xhttp.onload = function() {
-					console.log(this);
-					document.getElementById("display").innerHTML = this.responseText
+
 				}
 				document.getElementById('emailError').innerHTML = '';
 			} else {
